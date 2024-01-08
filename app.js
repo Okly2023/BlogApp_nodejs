@@ -1,12 +1,14 @@
 // Import the express module
 import express from 'express';
-
 // Import the mongoose module
 import mongoose from 'mongoose'; 
+// Import the  router from the user-route.js file
+import router from './routes/user-route.js';
 
 // Create a new express application
 const app = express();
-
+app.use(express.json());
+app.use("/api/users",router);
 // Connect to MongoDB
 mongoose
 .connect(
@@ -15,7 +17,8 @@ mongoose
 )
 .then(() => 
     // Start the express application on port 5000 after a successful database connection
-    app.listen(5000)
+    app.listen(5001)
+    
 )
 .then(() => 
     // Log a message to the console once the server is running
