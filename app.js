@@ -4,11 +4,13 @@ import express from 'express';
 import mongoose from 'mongoose'; 
 // Import the  router from the user-route.js file
 import router from './routes/user-route.js';
+import blogRouter from './routes/blog-route.js';
 
 // Create a new express application
 const app = express();
 app.use(express.json());
 app.use("/api/users",router);
+app.use("/api/blogs",blogRouter);
 // Connect to MongoDB
 mongoose
 .connect(
