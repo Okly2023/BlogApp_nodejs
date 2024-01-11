@@ -41,7 +41,7 @@ This is the backend RestApi for the BlogApp, a simple blogging platform. It's bu
 You'll need to set the following environment variables:
 
 - `DB_URL`: The connection string for your MongoDB database
-- `PORT`: The port on which the server should run (default is 5000)
+- `PORT`: The port on which the server should run (default is 5001)
 
 ## Contributing
 
